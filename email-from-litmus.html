@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv=3D "Content-Type" content=3D "text/html; charset=3Dutf-8=">
+    <meta name=3D "viewport" content=3D "width=3Ddevice-width, initial-scale= =3D1">
+    <meta http-equiv=3D "X-UA-Compatible" content=3D "IE=3Dedge">
+    <meta name=3D "x-apple-disable-message-reformatting">
+    <title>Litmus</title>
+    <style type=3D "text/css">
+    a {
+        text-decoration: none;
+    }
+
+    =2Elink:hover {
+        text-decoration: none !important;
+    }
+    </style>
+    <style type=3D "text/css">
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+
+    @media {}
+
+    @media screen {
+        @font-face {
+            font-family: 'proxima_nova_rgregular';
+            src: url('https://litmus=2Ecom/fonts/Emails/proximanova-r= egular-webfont=2Eeot');
+ src: url('https://litmus=2Ecom/fonts/Emails/proximanova-r=
+ egular-webfont=2Eeot?#iefix') format('embedded-opentype'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-r=
+ egular-webfont=2Ewoff') format('woff'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-r=
+ egular-webfont=2Ettf') format('truetype'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-r=
+ egular-webfont=2Esvg#proxima_nova_rgregular') format('svg');
+ font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'proxima_nova_rgbold';
+            src: url('https://litmus=2Ecom/fonts/Emails/proximanova-b=
+ old-webfont=2Eeot');
+ src: url('https://litmus=2Ecom/fonts/Emails/proximanova-b=
+ old-webfont=2Eeot?#iefix') format('embedded-opentype'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-b=
+ old-webfont=2Ewoff') format('woff'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-b=
+ old-webfont=2Ettf') format('truetype'),
+ url('https://litmus=2Ecom/fonts/Emails/proximanova-b=
+ old-webfont=2Esvg#proxima_nova_rgbold') format('svg');
+ font-weight: normal;
+            font-style: normal;
+        }
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0),
+    and (min--=moz-device-pixel-ratio: 0) {
+        #normal {
+            font-weight: normal !important;
+        }
+    }
+    </style>
+    <style>
+    u+=2Ebody=2Ept50 {
+        padding-top: 150px !important;
+    }
+
+    u+#body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+    </style>
+    <style type=3D "text/css">
+    /***************
+      PADDING 0px
+      ***************/
+    /***************
+      PADDING 5px
+      ***************/
+    /***************
+      PADDING 10px
+      ***************/
+    /***************
+      PADDING 15px
+      ***************/
+    /***************
+      PADDING 20px
+      ***************/
+    /***************
+      PADDING 25px
+      ***************/
+    /***************
+      PADDING 30px
+      ***************/
+    /***************
+      PADDING 35px
+      ***************/
+    /***************
+      PADDING 40px
+      ***************/
+    /***************
+      PADDING 45px
+      ***************/
+    /***************
+      PADDING 50px
+      ***************/
+    /***************
+      PADDING 55px
+      ***************/
+    /***************
+      PADDING 60px
+      ***************/
+    /***************
+      PADDING 65px
+      ***************/
+    /***************
+      PADDING 70px
+      ***************/
+    /***************
+      PADDING 75px
+      ***************/
+    /***************
+      PADDING 100px
+      ***************/
+    /***************
+      PADDING 125px
+      ***************/
+    /***************
+      PADDING 150px
+      ***************/
+    /**********
+          FONT SIZES
+          ***********/
+    /***********
+          LINE HEIGHTS
+          ***********/
+    /***********
+          COLORS
+          ***********/
+    /***********
+          ALIGNMENT
+          ***********/
+
+    @media screen and (min-width: 750px) {
+        h1 {
+            font-size: 48px !important;
+            line-height: 54px !important;
+        }
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width:=800px) {
+        =2Eframe {
+            /*display: table-cell;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+      min-width: 100vw;
+          overflow: scroll;*/
+        }
+        =2Ewebkit-hide {
+            display: none !important;
+        }
+        =2Ewebkit-show {
+            display: block !important;
+        }
+        =2Ewebkit-show-td {
+            display: table-cell !important;
+        }
+        =2Ewebkit-spacer {
+            padding-bottom: 100px;
+        }
+        =2Earrow {
+            padding: 18px 20px;
+            margin: 15px;
+            font-family: Trebuchet MS;
+            color: #fff;
+            cursor: pointer;
+            font-size: 30px;
+            line-height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        =2Earrow:hover {
+            background: rgba(0, 0, 0, =2E2);
+        }
+        =2Earrow:hover:before {
+            position: absolute;
+            font-size: 12px;
+            font-family: arial;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 1;
+            margin-top: 50px;
+        }
+        =2Earrow[name=3D"next"]:hover:before {
+            content: 'Next article';
+            margin-left: -22px;
+        }
+        =2Earrow[name=3D"prev"]:hover:before {
+            content: 'Last article';
+            margin-left: -18px;
+        }
+        =2Earrow[title=3D"grey"]:hover:before {
+            color: #888888;
+        }
+        =2Eslider-dots {
+            position: fixed;
+            bottom: 0px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        =2Edot {
+            display: inline-block;
+            border: 6px solid rgba(255, 255, 255, 0=2E4);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        =2Edot:hover {
+            border-color: #fff;
+        }
+        =2Edot:hover:before {
+            position: absolute;
+            font-size: 12px;
+            font-family: arial;
+            background: rgba(0, 0, 0, =2E3);
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 1;
+            margin-top: -40px;
+            transform: translateX(-50%);
+            font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, A=rial, sans-serif;
+        }
+        #one:checked~=2Eslider-dots=2Edot[name=3D"one"] {
+            border-color: #ffffff !important;
+        }
+        #two:checked~=2Eslider-dots=2Edot[name=3D"two"] {
+            border-color: #ffffff !important;
+        }
+        #three:checked~=2Eslider-dots=2Edot[name=3D"three"] {
+            border-color: #ffffff !important;
+        }
+        #four:checked~=2Eslider-dots=2Edot[name=3D"four"] {
+            border-color: #ffffff !important;
+        }
+        #five:checked~=2Eslider-dots=2Edot[name=3D"five"] {
+            border-color: #ffffff !important;
+        }
+        #six:checked~=2Eslider-dots=2Edot[name=3D"six"] {
+            border-color: #ffffff !important;
+        }
+        #seven:checked~=2Eslider-dots=2Edot[name=3D"seven"] {
+            border-color: #ffffff !important;
+        }
+        #eight:checked~=2Eslider-dots=2Edot[name=3D"eight"] {
+            border-color: #ffffff !important;
+        }
+        =2Edot[name=3D"one"]:hover:before {
+            content: 'Interactive Email: Opportunities and Challenges';
+            width: 260px;
+        }
+        =2Edot[name=3D"two"]:hover:before {
+            content: 'The Ultimate Guide to List-Unsubscribe';
+            width: 210px;
+        }
+        =2Edot[name=3D"three"]:hover:before {
+            content: 'iPhone X Email Previews Are Here';
+            width: 190px;
+        }
+        =2Edot[name=3D"four"]:hover:before {
+            content: 'Everything You Need to Know About Bulletproof Buttons';
+            width: 305px;
+        }
+        =2Edot[name=3D"five"]:hover:before {
+            content: 'Email Pixel Art: The Rarest and Coolest Defensive Design T=
+ actic';
+ width: 340px;
+        }
+        =2Edot[name=3D"six"]:hover:before {
+            content: 'The Root Cause of Poor Email Deliverability Webinar Record=
+ ing and Q&A';
+ width: 390px;
+        }
+        =2Edot[name=3D"seven"]:hover:before {
+            content: 'New episodes of The Email Design Podcast';
+            width: 240px;
+        }
+        =2Edot[name=3D"eight"]:hover:before {
+            content: 'Sign Up for a Free Litmus Demo';
+            width: 180px;
+        }
+        =2Eslide-content {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            height: 100vh;
+            vertical-align: middle;
+            background: none !important;
+        }
+        =2Eabc {
+            display: block !important;
+        }
+        #ok:checked,
+        #ok:checked~[type=3D"radio"] {
+            display: inline-block !important;
+        }
+        #one:not(:checked)~*=2Edef {
+            display: none;
+        }
+        #two:not(:checked)~*=2Eghi {
+            display: none;
+            opacity: 0;
+        }
+        #three:not(:checked)~*=2Ejkl {
+            display: none;
+        }
+        #four:not(:checked)~*=2Emno {
+            display: none;
+        }
+        #five:not(:checked)~*=2Epqr {
+            display: none;
+        }
+        #six:not(:checked)~*=2Estu {
+            display: none;
+        }
+        #seven:not(:checked)~*=2Evwx {
+            display: none;
+        }
+        #eight:not(:checked)~*=2Eyz {
+            display: none;
+        }
+        =2Edef,
+        =2Eghi,
+        =2Ejkl {
+            animation: fadein 1s;
+        }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        input {
+            -display: none;
+        }
+        #two:checked~=2Eframe {
+            background: #f3863d !important;
+            -transition: 1=2E5s;
+        }
+        #three:checked~=2Eframe {
+            background: #444 !important;
+            -transition: 1=2E5s;
+            height: 105% !important;
+        }
+        #four:checked~=2Eframe {
+            background: #56c2b8 !important;
+            -transition: 1=2E5s;
+            height: 105% !important;
+        }
+        #five:checked~=2Eframe {
+            background: #f06d65 !important;
+            -transition: 1=2E5s;
+        }
+        #six:checked~=2Eframe {
+            background: #54c2a2 !important;
+            -transition: 1=2E5s;
+            height: 140% !important;
+        }
+        #six:checked~*=2Edeliv {
+            -padding-top: 300px !important;
+        }
+        #seven:checked~=2Eframe {
+            background: #f3b35c !important;
+            -transition: 1=2E5s;
+            height: 135% !important;
+        }
+        #seven:checked~*=2Epodcast {
+            -padding-top: 250px !important;
+        }
+        #eight:checked~=2Eframe {
+            background: #f0f0f0 !important;
+            -transition: 1=2E5s;
+            height: 130% !important;
+        }
+        #eight:checked~*=2Edemo {
+            -padding-top: 250px !important;
+        }
+    }
+    </style>
+</head>
+
+<body style=3D "padding: 0; margin: 0;" class=3D "body" id=3D "body">
+    <div class=3D "preheader" style=3D "display:none;max-height:0;overflow:hi=
+dden;">
+        Interactive email, iPhone X previews, list-unsubscribe, bulletproof b= uttons, and more=2E
+    </div>
+    <div style=3D "display: none; width: 0px; height: 0px; max-height: 0px; =
+overflow: hidden;">
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;= &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb= sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;= &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw= nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+    </div>
+    <!--[if (gte mso 9)|(IE)]><!-->
+    <input type=3D "checkbox" style=3D "display: none;" id=3D "check">
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "one" che=c ked>
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "two">
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "three"> =
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "four"> =
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "five"> =
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "six">
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "seven"> =
+    <input type=3D "radio" name=3D "page" style=3D "display: none;" id=3D "eight">=
+    <!--<![endif]-->
+    <div class=3D "frame" style=3D "background:#a884d3;">
+        <div style=3D "padding-top:5px;padding-bottom:5px;padding-right:10px=
+;padding-left:10px;background-color:#333; -width: 100%; position: relative;=
+ z-index: 9999;" class=3D "pt5 pb5 pl10 pr10">
+            <p class=3D "tac" style=3D "margin:0;mso-margin-top-alt:15px;font-s=
+ize:16px;line-height:24px;font-family:'proxima_nova_rgregular', Proxima Nov=
+a, Helvetica, Arial, sans-serif;color:#333;text-align:center;">
+                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-pardot-ut=
+m-medium-email/dgqbtl/444564093" target=3D "_blank" class=3D "webkit-show whi=
+te fsz12 lh16 link" style=3D "font-family:'proxima_nova_rgregular', Proxima =
+Nova, Helvetica, Arial, sans-serif;color:#0088cc;text-decoration:underline;=
+font-size:12px;line-height:16px;color:#ffffff;display: none;">Read how we c=
+reated the interactive slider in this month&rsquo;s newsletter=2E</a>
+                <br>
+                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/2017-11-20/dgqbt=
+n/444564093" target=3D "_blank" style=3D "font-family:'proxima_nova_rgregular=
+', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://pages=2E=
+litmus=2Ecom/l/31032/2014-10-06/h3mtw/31032/36290/litmus_logo_wheel=2Epng" =
+alt=3D"Litmus" width=3D"70" height=3D"70" style=3D"display: block; margin: =
+0 auto;" border=3D"0"/></a>
+                <br>
+            </p>
+        </div>
+        <div class=3D "abc">
+            <div class=3D "def">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#a884d3" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center" style=3D "display:tabl=
+e;width:100% !important;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "eight" name=3D "prev" class=3D "arrow">&#9664;
+                            <=/ label>
+                    </div>
+                    <div class=3D "td pl25 pr25 tac pb50 pt25 vam" style=3D "paddin=
+g-top:25px;padding-right:25px;padding-left:25px;padding-bottom:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsg/444564093" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-15/dfjz1z/31032/131967/interactive_cha=
+llenges=2Epng" alt=3D"interactive email, oh my!" width=3D"300" border=3D"0"=
+ class=3D"fsz16 white" style=3D"font-size:16px;color:#ffffff;max-width: 60%=
+;"/></a>
+                            <h1 class=3D "pt15" style=3D "margin:0;font-size:40px;line-=
+height:44px;color:#ffffff;font-weight:bold;display:inline-block;mso-margin-=
+top-alt:20px;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Ar=
+ial, sans-serif;padding-top:15px;">Interactive Email: Opportunities and Cha=
+llenges</h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">Hamb= urger menus, image carousels, and even shopping carts&mdash;interactive ele= ments we never thought were possible in email are becoming more common=2E W= e break down the opportunities and challenges of interactive email=2E</p>
+                            <!--[if (gte mso 12)]><br>
+                  <![endif]-->
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsg/444564093" class=3D "cta" style=3D "font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #e86f42; border: 1px solid #e86=
+f42; mso-border-alt: 8px solid #e86f42;" target=3D "_blank">See the pros and=
+ cons &rarr;</a>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "two" name=3D "next" class=3D "arrow">&#9654;</l=a bel>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <div class=3D "ghi">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#f3863d" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center" style=3D "display:tabl=
+e;width:100% !important;background: #f3863d;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "one" name=3D "prev" class=3D "arrow">&#9664;</l=a bel>
+                    </div>
+                    <div class=3D "td pl50 pr50 tac pt25 pb50 vam" style=3D "paddin=
+g-top:25px;padding-bottom:50px;padding-right:50px;padding-left:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsj/444564093" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-15/dfjz2d/31032/131971/list_unsubscrib=
+e=2Epng" alt=3D"embrace it" width=3D"380" border=3D"0"/></a>
+                            <h1 class=3D "pt15" style=3D "margin:0;font-size:40px;line-=
+height:44px;color:#ffffff;font-weight:bold;display:inline-block;mso-margin-=
+top-alt:20px;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Ar=
+ial, sans-serif;padding-top:15px;">The Ultimate Guide to List-Unsubscribe</=
+h1>
+                  <p class=3D"pt25" style=3D"margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">List=
+-unsubscribe strikes fear into the hearts of many marketers=2E But it shoul=
+dn&rsquo;t! Discover what list-unsubscribe is, how it works, and why an eas=
+y unsubscribe is actually a good thing=2E</p>
+                  <!--[if gte mso 12]><br>
+                  <![endif]-->
+                  <a href=3D"http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsj/444564093" class=3D"cta" style=3D"font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #549AE1; border: 1px solid #549=
+AE1; mso-border-alt: 8px solid #549AE1;" target=3D"_blank">Don&rsquo;t fear=
+ the unsubscribe &rarr;</a>
+                </div>
+                <div class=3D"webkit-spacer"></div>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+              </div>
+              <div class=3D"td tac vam webkit-show-td" style=3D"text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                <label for=3D"three" name=3D"next" class=3D"arrow">&#9654;<=
+/label>
+              </div>
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+          </div>
+          <div class=3D"jkl">
+            <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#444444" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+            <div class=3D"slide-content table center" style=3D"display:tabl=
+e;width:100% !important;background: #444444;">
+              <div class=3D"td tac vam webkit-show-td" style=3D"text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                <label for=3D"two" name=3D"prev" class=3D"arrow">&#9664;</l=
+abel>
+              </div>
+              <div class=3D"td pl35 pr35 tac pt25 pb50 vam" style=3D"paddin=
+g-top:25px;padding-right:35px;padding-left:35px;padding-bottom:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                <div class=3D"max650 center" style=3D"max-width:700px;margi=
+n:0 auto;">
+                  <a href=3D"http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbtq/444564093" style=3D"font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-08/ddc5hb/31032/131157/iphonex_new=2Ep=
+ng" alt=3D"iPhone X" width=3D"200" border=3D"0" class=3D"fsz16 white" style=
+=3D"font-size:16px;color:#ffffff;border-bottom: 1px solid #666; display: bl=
+ock; margin: 0 auto;"/></a>
+                  <h1 class=3D"pt15" style=3D"margin:0;font-size:40px;line-=
+height:44px;color:#ffffff;font-weight:bold;display:inline-block;mso-margin-=
+top-alt:20px;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Ar=
+ial, sans-serif;padding-top:15px;">iPhone X Email Previews <br>
+                    are Here</h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;color:=
+ #bbb;">Curious to find out how the iPhone X will affect your email campaig= ns? Great news&mdash;we&rsquo;ve added Apple&rsquo;s latest device to Litmu= s Email Previews=2E
+                            </p>
+                            <p class=3D "pt20" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:20px;color:=
+ #bbbbbb;">
+                                New email clients can introduce unforeseen rendering is= sues for your emails=2E See how your own emails render in iPhone X and run = a Checklist on your next campaign=2E
+                            </p>
+                            <!--[if gte mso 12]><br>
+                  <![endif]-->
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgzxbd/444564093" class=3D "cta" style=3D "font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #e86f42; border: 1px solid #e86=
+f42; mso-border-alt: 8px solid #e86f42;" target=3D "_blank">Test my emails =
+=E2=86=92</a>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "four" name=3D "next" class=3D "arrow">&#9654;</=l abel>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <div class=3D "mno">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#56c2b8" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center" style=3D "display:tabl=
+e;width:100% !important;background: #56c2b8;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "three" name=3D "prev" class=3D "arrow">&#9664;
+                            <=/ label>
+                    </div>
+                    <div class=3D "td pl50 pr50 tac pt25 pb50 vam" style=3D "paddin=
+g-top:25px;padding-bottom:50px;padding-right:50px;padding-left:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsn/444564093" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-15/dfjz4n/31032/131977/bb_button2=2Epn=
+g" alt=3D"buttons buttons buttons" width=3D"300" border=3D"0" class=3D"fsz1=
+6 white" style=3D"font-size:16px;color:#ffffff;"/></a>
+                            <h1 style=3D "margin:0;font-size:40px;line-height:44px;col=
+or:#ffffff;font-weight:bold;display:inline-block;mso-margin-top-alt:20px;fo=
+nt-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif=
+;">Everything You Need to Know About Bulletproof Buttons</h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">
+                                Marketers have moved away from using image-based call-t= o-action buttons in their emails due to image blocking and accessibility co= ncerns=2E The alternative? Bulletproof buttons=2E Learn what a bulletproof = button is and how you can use them in your emails=2E
+                            </p>
+                            <!--[if gte mso 12]><br>
+                  <![endif]-->
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsn/444564093" class=3D "cta" style=3D "font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #e86f42; border: 1px solid #e86=
+f42; mso-border-alt: 8px solid #e86f42;" target=3D "_blank">Build better but=
+tons &rarr;</a>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "five" name=3D "next" class=3D "arrow">&#9654;</=l abel>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <div class=3D "pqr">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#f06d65" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center" style=3D "display:tabl=
+e;width:100% !important;background: #f06d65;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "four" name=3D "prev" class=3D "arrow">&#9664;</=l abel>
+                    </div>
+                    <div class=3D "td pl50 pr50 tac pt25 pb50 vam" style=3D "paddin=
+g-top:25px;padding-bottom:50px;padding-right:50px;padding-left:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsq/444564093" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-15/dfjz4s/31032/131979/email_pixel_art=
+_the_rarest_and_coolest_defensive_design_tactic=2Epng" alt=3D"the coolest t=
+actic" width=3D"400" border=3D"0" style=3D"max-width: 80%;"/></a>
+                            <h1 style=3D "margin:0;font-size:40px;line-height:44px;col=
+or:#ffffff;font-weight:bold;display:inline-block;mso-margin-top-alt:20px;fo=
+nt-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif=
+;">Email Pixel Art: The Rarest and Coolest Defensive Design Tactic</h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">
+                                Including pictures in your emails even when images are = blocked is possible with pixel art=2E Learn how and understand some of the = issues you need to consider before using them=2E
+                            </p>
+                            <!--[if gte mso 12]><br>
+                  <![endif]-->
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbsq/444564093" class=3D "cta" style=3D "font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #54C1E3; border: 1px solid #54C=
+1E3; mso-border-alt: 8px solid #54C1E3;" target=3D "_blank">Transform your e=
+mails &rarr;</a>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "six" name=3D "next" class=3D "arrow">&#9654;</l=a bel>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <div class=3D "stu">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#55c2a2" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center deliv" style=3D "displa=
+y:table;width:100% !important;background: #55c2a2;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "five" name=3D "prev" class=3D "arrow">&#9664;</=l abel>
+                    </div>
+                    <div class=3D "td pl35 pr35 tac pt25 pb50" style=3D "padding-to=
+p:25px;padding-right:35px;padding-left:35px;padding-bottom:50px;text-align:=
+center;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbss/444564093" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://=
+pages=2Elitmus=2Ecom/l/31032/2017-11-15/dfjzjb/31032/132011/deliv_qa=2Epng"=
+ alt=3D"{alt}" width=3D"450" border=3D"0" style=3D"max-width: 100%;"/></a> =
+                            <p class=3D "white bold pt15" style=3D "margin:0;mso-margi=
+n-top-alt:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rg=
+regular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top=
+:15px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvet=
+ica, Arial, sans-serif;font-weight:bold;color:#ffffff;">
+                                &ndash; WEBINAR RECORDING AND Q&A &ndash;
+                            </p>
+                            <h1 style=3D "margin:0;font-size:40px;line-height:44px;col=
+or:#ffffff;font-weight:bold;display:inline-block;mso-margin-top-alt:20px;fo=
+nt-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif=
+;">
+                    The Root Cause of Poor Email Deliverability
+                        </h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">
+                                Discover the various ways that marketers try to improve= their poor email deliverability and learn which tactics work best=2E Downl= oad the slides or catch up on the webinar recording and let Litmus Research= Director Chad White and Product Manager Jay Brangiforte answer your burnin= g deliverability questions=2E
+                            </p>
+                            <!--[if gte mso 12]><br>
+                  <![endif]-->
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-par=
+dot-utm-medium-email/dgqbss/444564093" class=3D "cta" style=3D "font-family:'=
+proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-fa=
+mily:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font=
+-weight:normal;color:#ffffff;text-decoration:none;border-radius:30px;paddin=
+g:15px 30px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margi=
+n-top:20px;font-size:18px;background-color: #e86f42; border: 1px solid #e86=
+f42; mso-border-alt: 8px solid #e86f42;" target=3D "_blank">Watch the webina=
+r &rarr;</a>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class=3D "pt25 pb25 pl25 pr25" style=3D "padding-top:2=
+5px;padding-bottom:25px;padding-right:25px;padding-left:25px;background: #1=
+d9a75; border-radius: 3px;">
+                                <!--[if (gte mso 9)|(IE)]>
+                      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" role=3D"presentation">
+                        <tr>
+                          <td align=3D"center" style=3D"mso-padding-alt: 25=
+px;" bgcolor=3D"#1d9a75">
+                    <![endif]-->
+                                <h2 class=3D "white" style=3D "margin:0;font-family:'prox=
+ima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;color:#ffffff;=
+">
+                      Make It to the Inbox, Not the Spam Folder
+                                </h2>
+                                <p class=3D "pt10" style=3D "margin:0;mso-margin-top-alt:=
+15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', =
+Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:10px;-col=
+or: #fff;">
+                                    Part of our Plus plans and above, Spam Testing helps = you find deliverability issues before you press send=2E
+                                </p>
+                                <br>
+                                <p style=3D "margin:0;mso-margin-top-alt:15px;font-size:=
+16px;line-height:24px;font-family:'proxima_nova_rgregular', Proxima Nova, H=
+elvetica, Arial, sans-serif;color:#333;"><a href=3D "http://pages=2Elitmus=
+=2Ecom/e/31032/ardot-utm-medium-email-testing/dgzxbg/444564093" class=3D "li=
+nk fsz20 white lh30" target=3D "_blank" style=3D "font-family:'proxima_nova_r=
+gregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#0088cc;text-de=
+coration:underline;font-size:20px;line-height:30px;color:#ffffff;">Explore =
+Spam Testing =E2=86=92</a></p>
+                                <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                  </tr>
+                </table>
+                    <![endif]-->
+                            </div>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "seven" name=3D "next" class=3D "arrow">&#9654;
+                            <=/ label>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+              <tr>
+                <td align=3D"center" bgcolor=3D"#f3b35c" style=3D"mso-paddi=
+ng-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+          <![endif]-->
+            <div class=3D "vwx">
+                <div class=3D "slide-content table center podcast" style=3D "disp=
+lay:table;width:100% !important;background: #f3b35c;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "six" name=3D "prev" class=3D "arrow">&#9664;</l=a bel>
+                    </div>
+                    <div class=3D "td pl35 pr35 tac pt25 pb50 vam" style=3D "paddin=
+g-top:25px;padding-right:35px;padding-left:35px;padding-bottom:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/2017-11-20=
+/dgqbts/444564093" target=3D "_blank" style=3D "font-family:'proxima_nova_rgr=
+egular', Proxima Nova, Helvetica, Arial, sans-serif;"><img src=3D"http://pa=
+ges=2Elitmus=2Ecom/l/31032/2017-02-09/bqvf44/31032/107351/podcast_icon2=2Ep=
+ng" width=3D"225" height=3D"218" alt=3D"music to your emails" style=3D"disp=
+lay: block; border: 0px; margin: 0 auto;" class=3D"center"/></a>
+                            <h1 class=3D "pt25" style=3D "margin:0;font-size:40px;line-=
+height:44px;color:#ffffff;font-weight:bold;display:inline-block;mso-margin-=
+top-alt:20px;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Ar=
+ial, sans-serif;padding-top:25px;">The Email Design Podcast</h1>
+                            <p class=3D "pt25" style=3D "margin:0;mso-margin-top-alt:15=
+px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Pr=
+oxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;">
+                                Join hosts Kevin Mandeville & Jason Rodriguez as they t= alk about the latest news in the email world=2E
+                            </p>
+                            <p class=3D "pt25 fsz20 lh26" style=3D "margin:0;mso-margin=
+-top-alt:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgr=
+egular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:=
+25px;font-size:20px;line-height:26px;">
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-p=
+ardot-utm-medium-email/dgqbsx/444564093" class=3D "link white" target=3D "_bl=
+ank" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica=
+, Arial, sans-serif;color:#0088cc;text-decoration:underline;color:#ffffff;"=>#80: A new email mentorship program and POP/IMAP accounts come to Gmail iO=
+S</a>
+                                <br>
+                                <br>
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-p=
+ardot-utm-medium-email/dgqbsz/444564093" class=3D "link white" target=3D "_bl=
+ank" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica=
+, Arial, sans-serif;color:#0088cc;text-decoration:underline;color:#ffffff;"=>#81: MailChimp moves to single-opt-in and Alto Mail to be retired</a>
+                                <br> =
+                                <br>
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/source-p=
+ardot-utm-medium-email/dgqbt2/444564093" class=3D "link white" target=3D "_bl=
+ank" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica=
+, Arial, sans-serif;color:#0088cc;text-decoration:underline;color:#ffffff;"=>#82: Litmus Community Q&A Rapid Fire</a>
+                            </p>
+                            <p class=3D "pt25 pb25" style=3D "margin:0;mso-margin-top-a=
+lt:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular=
+', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:25px;p=
+adding-bottom:25px;">
+                                Subscribe to the #EmailDesignPodcast on iTunes, YouTube= , SoundCloud or follow along on Twitter=2E
+                            </p>
+                            <div class=3D "tac vam pl50" style=3D "padding-left:50px;te=
+xt-align:center;vertical-align:middle;">
+                                <!--[if (gte mso 9)|(IE)]>
+                      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"500" role=3D"presentation" style=3D"mso-padding-alt: 25px;" ali=
+gn=3D"center">
+                        <tr>
+                          <td align=3D"center" valign=3D"top">
+                    <![endif]-->
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/cITFC7iy=
+h9D4DtBAnWowjyPBKN4vmF/dgqbt4/444564093" target=3D "_blank" style=3D "font-fa=
+mily:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;"=>
+                      <img src=3D"http://pages=2Elitmus=2Ecom/l/31032/2017-=
+02-09/bqvf48/31032/107355/YouTube_logo_dark1=2Epng" width=3D"100" height=3D=
+"57" alt=3D"youtube" style=3D"display:inline-block;border:0px;" class=3D"ce=
+nter podcast-hover"/>
+                </a> &nbsp; &nbsp; &nbsp;
+                                <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    <td align=3D"center">
+                    <![endif]-->
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/email-de=
+sign-podcast/dgqbt6/444564093" target=3D "_blank" style=3D "font-family:'prox=
+ima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;">
+                      <img src=3D"http://pages=2Elitmus=2Ecom/l/31032/2017-=
+02-09/bqvf4b/31032/107357/soundcloud_logo=2Epng" width=3D"100" height=3D"57=
+" style=3D"display:inline-block;border:0px;" alt=3D"soundcloud" class=3D"ce=
+nter podcast-hover vat"/>
+                </a> &nbsp; &nbsp; &nbsp;
+                                <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    <td align=3D"center">
+                    <![endif]-->
+                                <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/ail-desi=
+gn-podcast-id904262438/dgqbt8/444564093" target=3D "_blank" style=3D "font-fa=
+mily:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;"=>
+                      <img src=3D"http://pages=2Elitmus=2Ecom/l/31032/2017-=
+02-09/bqvf4d/31032/107359/itunes_logo=2Epng" width=3D"150" height=3D"45" al=
+t=3D"itunes" style=3D"padding-top:5px;display:inline-block;border:0px;" cla=
+ss=3D"center podcast-hover vat pt5"/></a>
+                                <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                  </tr>
+                </table>
+                    <![endif]-->
+                            </div>
+                        </div>
+                        <div class=3D "webkit-spacer"></div>
+                        <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+                <![endif]-->
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "eight" name=3D "next" class=3D "arrow">&#9654;
+                            <=/ label>
+                    </div>
+                </div>
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]-->
+            <div class=3D "yz">
+                <!--[if (gte mso 9)|(IE)]>
+              <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" role=3D"presentation">
+                <tr>
+                  <td align=3D"center" bgcolor=3D"#f0f0f0" style=3D"mso-pad=
+ding-top-alt: 50px; mso-padding-bottom-alt: 50px;">
+            <![endif]-->
+                <div class=3D "slide-content table center" style=3D "display:tabl=
+e;width:100% !important;background: #f0f0f0;">
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "seven" name=3D "prev" title=3D "grey" class=3D "=
+arrow">&#9664;</label>
+                    </div>
+                    <div class=3D "td pl35 pr35 tac pt25 pb50 vam" style=3D "paddin=
+g-top:25px;padding-right:35px;padding-left:35px;padding-bottom:50px;text-al=
+ign:center;vertical-align:middle;display:table-cell;">
+                        <!--[if (gte mso 9)|(IE)]>
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"700" align=3D"center" role=3D"presentation">
+                    <tr>
+                      <td align=3D"center">
+                <![endif]-->
+                        <div class=3D "max650 center" style=3D "max-width:700px;margi=
+n:0 auto;">
+                            <!--[if (gte mso 9)|(IE)]>
+                    <table cellspacing=3D"0" padding=3D"0" border=3D"0" wid=
+th=3D"600" role=3D"presentation">
+                      <tr>
+                        <td align=3D"center">
+                  <![endif]-->
+                            <div class=3D "max600 center pl25 pr25" style=3D "padding-r=
+ight:25px;padding-left:25px;max-width: 600px; margin: 0 auto; padding-top: =
+35px;">
+                                <div class=3D "session tac" style=3D "text-align:center;"=>
+                                    <!--[if (gte mso 9)|(IE)]>
+                        <table cellspacing=3D"0" padding=3D"0" border=3D"0"=
+ width=3D"100%" role=3D"presentation">
+                          <tr>
+                            <td align=3D"center" valign=3D"top">
+                      <![endif]-->
+                                    <h1 style=3D "margin:0;font-size:40px;line-height:44px=
+;color:#ffffff;font-weight:bold;display:inline-block;mso-margin-top-alt:20p=
+x;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-s=
+erif;padding-top:15px;mso-margin-top-alt: 15px; font-size: 36px !important;=
+ color: #333333; line-height: 40px !important;" class=3D "pt15">
+                        Sign Up for a Free Litmus Demo
+                    </h1>
+                                    <p class=3D "pt15" style=3D "margin:0;mso-margin-top-al=
+t:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular'=
+, Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:15px;co=
+lor: #888888; mso-padding-top-alt: 15px;">
+                                        New to Litmus, curious, or just need a quick refres= her on how Litmus can improve your email creation process? Join our custome= r support team for a walk through of the Litmus Email Creative Platform=2E =
+                                        <!--[if gte mso 12]>
+                          <br>
+                          <br>
+                        <![endif]-->
+                                    </p>
+                                    <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                  </table>
+                      <![endif]-->
+                                </div>
+                            </div>
+                            <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                </tr>
+              </table>
+                  <![endif]-->
+                            <div class=3D "center pt25 pl25 pr25" style=3D "padding-top=
+:25px;padding-right:25px;padding-left:25px;max-width: 600px; margin: 0 auto=
+;">
+                                <!--[if gte mso 12]>
+                      <table cellspacing=3D"0" padding=3D"0" border=3D"0" w=
+idth=3D"800" role=3D"presentation" align=3D"center">
+                        <tr>
+                          <td align=3D"center" valign=3D"top">
+                    <![endif]-->
+                                <div class=3D "tac" style=3D "text-align:center;">
+                                    <div class=3D "table w100p" style=3D "display:table;wid=
+th:100% !important;">
+                                        <!--[if gte mso 12]>
+                          <table cellspacing=3D"0" padding=3D"0" border=3D"=
+0" width=3D"100%" role=3D"presentation">
+                            <tr>
+                              <td width=3D"190" align=3D"center" style=3D"m=
+so-padding-top-alt: 25px;">
+                        <![endif]-->
+                                        <table cellspacing=3D "0" cellpadding=3D "0" border==3D "0" width=3D "100%" role=3D "presentation">
+                                            <tr>
+                                                <td bgcolor=3D "#f36c5e" class=3D "pt5 pb5 pl10 p=
+r10" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica=
+, Arial, sans-serif;padding-top:5px;padding-bottom:5px;padding-right:10px;p=
+adding-left:10px;border-radius: 3px 3px 0 0;" align=3D "center">
+                                                    <p class=3D "white fsz20 bold" style=3D "margin=
+:0;mso-margin-top-alt:15px;font-size:16px;line-height:24px;font-family:'pro=
+xima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333=
+;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, =
+Arial, sans-serif;font-weight:bold;font-size:20px;color:#ffffff;">NOV</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align=3D "center" bgcolor=3D "#ffffff" class==3D "pt15 pb15 pl10 pr10" style=3D "font-family:'proxima_nova_rgregular', Pro=
+xima Nova, Helvetica, Arial, sans-serif;padding-right:10px;padding-left:10p=
+x;padding-top:15px;padding-bottom:15px;border-radius: 0 0 3px 3px;">
+                                                    <p class=3D "fsz60 lh60" style=3D "margin:0;mso=
+-margin-top-alt:15px;font-size:16px;line-height:24px;font-family:'proxima_n=
+ova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;font-=
+size:60px;line-height:60px;">
+                                                        <b style=3D "color: #333333;">22</b>
+                                                    </p>
+                                                    <p style=3D "margin:0;mso-margin-top-alt:15px;=
+font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Proxi=
+ma Nova, Helvetica, Arial, sans-serif;color:#333;color: #333333;">11AM EST
+                                                        <=/ p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if gte mso 12]>
+                        </td>
+                        <td width=3D"13" align=3D"center" style=3D"mso-padd=
+ing-top-alt: 25px;">
+                        <![endif]-->
+                                        <div class=3D "td w5p" style=3D "display:table-cell;"=>&nbsp;</div>
+                                        <!--[if gte mso 12]>
+                        </td>
+                        <td width=3D"190" align=3D"center" style=3D"mso-pad=
+ding-top-alt: 25px;">
+                        <![endif]-->
+                                        <table cellspacing=3D "0" cellpadding=3D "0" border==3D "0" width=3D "100%" role=3D "presentation">
+                                            <tr>
+                                                <td bgcolor=3D "#f36c5e" class=3D "pt5 pb5 pl10 p=
+r10" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica=
+, Arial, sans-serif;padding-top:5px;padding-bottom:5px;padding-right:10px;p=
+adding-left:10px;border-radius: 3px 3px 0 0;" align=3D "center">
+                                                    <p class=3D "white fsz20 bold" style=3D "margin=
+:0;mso-margin-top-alt:15px;font-size:16px;line-height:24px;font-family:'pro=
+xima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333=
+;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, =
+Arial, sans-serif;font-weight:bold;font-size:20px;color:#ffffff;">NOV</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align=3D "center" bgcolor=3D "#ffffff" class==3D "pt15 pb15 pl10 pr10" style=3D "font-family:'proxima_nova_rgregular', Pro=
+xima Nova, Helvetica, Arial, sans-serif;padding-right:10px;padding-left:10p=
+x;padding-top:15px;padding-bottom:15px;border-radius: 0 0 3px 3px;">
+                                                    <p class=3D "fsz60 lh60" style=3D "margin:0;mso=
+-margin-top-alt:15px;font-size:16px;line-height:24px;font-family:'proxima_n=
+ova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;font-=
+size:60px;line-height:60px;">
+                                                        <b style=3D "color: #333333;">30</b>
+                                                    </p>
+                                                    <p style=3D "margin:0;mso-margin-top-alt:15px;=
+font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular', Proxi=
+ma Nova, Helvetica, Arial, sans-serif;color:#333;color: #333333;">2PM EST</=p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if gte mso 12]>
+                        </td>
+                        <td width=3D"14" align=3D"center" style=3D"mso-padd=
+ing-top-alt: 25px;">
+                        <![endif]-->
+                                        <div class=3D "td w5p" style=3D "display:table-cell;"=>&nbsp;</div>
+                                        <!--[if gte mso 12]>
+                        </td>
+                      </tr>
+                    </table>
+                        <![endif]-->
+                                    </div>
+                                </div>
+                                <!--[if gte mso 12]>
+                    </td>
+                  </tr>
+                </table>
+                    <![endif]-->
+                            </div>
+                            <div class=3D "pt20 max600 center pl25 pr25" style=3D "padd=
+ing-top:20px;padding-right:25px;padding-left:25px;max-width: 600px; margin:=
+ 0 auto;">
+                                <!--[if (gte mso 9)|(IE)]>
+                      <table cellspacing=3D"0" padding=3D"0" border=3D"0" w=
+idth=3D"600" role=3D"presentation" align=3D"center">
+                        <tr>
+                          <td align=3D"center" valign=3D"top" style=3D"mso-=
+padding-top-alt: 25px;" >
+                    <![endif]-->
+                                <div class=3D "tac" style=3D "text-align:center;">
+                                    <p style=3D "margin:0;mso-margin-top-alt:15px;font-siz=
+e:16px;line-height:24px;font-family:'proxima_nova_rgregular', Proxima Nova,=
+ Helvetica, Arial, sans-serif;color:#333;">
+                                        <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/rt-8=
+307007545656357377/dgqbtb/444564093" target=3D "_blank" class=3D "cta fsz18"=s tyle=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Ari=
+al, sans-serif;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, =
+Arial, sans-serif;font-weight:normal;color:#ffffff;text-decoration:none;bor=
+der-radius:30px;padding:15px 30px;display:inline-block;font-weight:bold;mso=
+-padding-alt:0px;margin-top:20px;font-size:18px;background-color: #f36c5e; =
+border: 1px solid #f36c5e; mso-border-alt: 8px solid #f36c5e; color: #fffff=
+f;">Register now &rarr;</a>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h2 class=3D "lh36 fsz30" style=3D "margin:0;font-famil=
+y:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-si=
+ze:30px;line-height:36px;color:#333333;">
+                        Want more email news in your inbox?
+                  </h2>
+                                    <p class=3D "p pt20" style=3D "margin:0;mso-margin-top-=
+alt:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregula=
+r', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:20px;=
+color: #888888;">
+                                        Get a weekly dose of Litmus and the latest email ma= rketing news when you sign up for Litmus Weekly=2E
+                                        <br>
+                                        <!--[if gte mso 12]><br>
+                        <![endif]-->
+                                        <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/sour=
+ce-pardot-utm-medium-email/dgqbtd/444564093" style=3D "font-family:'proxima_=
+nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;font-family:'pr=
+oxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:=
+normal;color:#ffffff;text-decoration:none;border-radius:30px;padding:15px 3=
+0px;display:inline-block;font-weight:bold;mso-padding-alt:0px;margin-top:20=
+px;font-size:18px;background-color: #aaaaaa; border: 1px solid #aaaaaa; mso=
+-border-alt: 8px solid #aaaaaa;" class=3D "cta fsz18">Sign up now &rarr;</a>=
+                                    </p>
+                                    <div class=3D "webkit-spacer"></div>
+                                    <br>
+                                    <style>
+                                                    @media print {
+                                        #_t {
+                                            background-image: url('https://=
+ afjry7z8=2Eemltrk=2Ecom/afjry7z8?p&d=3Dlitmus@oggettoweb=2Ecom');}} div=2EO=
+ utlookMessageHeader {
+                                                background-image:url('https://afjry7z8=2Eemltrk=2Ecom/=
+ afjry7z8?f&d=3Dlitmus@oggettoweb=2Ecom')} table=2Emoz-email-headers-table {=
+ background-image:url('https://afjry7z8=2Eemltrk=2Ecom/afjry7z8?f&d=3Dlitmus=
+ @oggettoweb=2Ecom')} blockquote #_t {background-image:url('https: //afjry7z8=
+                                                =2Eemltrk=2Ecom/afjry7z8?f&d=3Dlitmus@oggettoweb=2Ecom')} #MailContainerBod=
+ y #_t {
+                                                    background-image:url('https://afjry7z8=2Eemltrk=2Ecom/afjry7z8?f&d=
+=3Dlitmus@oggettoweb=2Ecom')}
+                                    </style>
+                                    <div id=3D "_t"></div>
+                                    <img src=3D "https://afjry7z8=2Eemltrk=2Ecom/afjry7z8?=
+d=3Dlitmus@oggettoweb=2Ecom" width=3D "1" height=3D "1" border=3D "0" alt=3D ""=/>
+                                </div>
+                                <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wid=
+th=3D"600" align=3D"center" role=3D"presentation">
+                  <tr>
+                    <td align=3D"center" style=3D"padding-top: 75px;">
+                    <![endif]-->
+                                <div class=3D "webkit-hide">
+                                    <div style=3D "padding-right:15px;padding-left:15px;te=
+xt-align:center;padding-right:15px;padding-left:15px;text-align:center;colo=
+r:#999999;max-width: 600px; margin: 0 auto;" class=3D "footer tac pl15 pr15"=>
+                                        <br>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/2017-11-20/d=
+gqbtg/444564093" target=3D "_blank" style=3D "font-family:'proxima_nova_rgreg=
+ular', Proxima Nova, Helvetica, Arial, sans-serif;font-family:'proxima_nova=
+_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#999999;text-=
+decoration:underline;">
+                          <img src=3D"http://pages=2Elitmus=2Ecom/l/31032/2=
+014-04-17/2hs6f/31032/17328/litmus_logo_footer=2Epng" width=3D"30" height=
+=3D"30" border=3D"0" style=3D"display:inline-block;"></a>
+                                        <p class=3D "pt15" style=3D "margin:0;mso-margin-top-=
+alt:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregula=
+r', Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:15px;=
+margin:0;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregula=
+r', Proxima Nova, Hevletica, Arial, sans-serif;padding-top:15px;font-size:1=
+3px;line-height:18px;color:#888888;">
+                                            <span class=3D "appleFooter">675 Massachusetts Ave=
+=2E<br>
+                            Cambridge, MA 02139, USA</span>
+                                            <br>
+                                            <a href=3D "http://pages=2Elitmus=2Ecom/webmail/31=
+032/444564093/4b2e9ac055feed28a0c26dd22a7a00378678a907fd26608c3ab697955feb8=
+231" target=3D "_blank" style=3D "font-family:'proxima_nova_rgregular', Proxi=
+ma Nova, Helvetica, Arial, sans-serif;color:#0088cc;text-decoration:underli=
+ne;font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sa=
+ns-serif;" class=3D "link">View online</a>
+                                            <br>
+                                            <br> You&rsquo;re receiving this email because you&rsq= uo;ve signed up to receive updates from Litmus=2E If you&rsquo;d prefer not= to receive updates, you can <a href=3D "http://pages=2Elitmus=2Ecom/emailPr=
+eference/31032/4b2e9ac055feed28a0c26dd22a7a00378678a907fd26608c3ab697955feb=
+8231/444564093" style=3D "font-family:'proxima_nova_rgregular', Proxima Nova=
+, Helvetica, Arial, sans-serif;color:#0088cc;text-decoration:underline;font=
+-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-seri=
+f;" class=3D "link">manage your preferences</a> or <a href=3D "http://pages=
+=2Elitmus=2Ecom/unsubscribe/u/31032/4b2e9ac055feed28a0c26dd22a7a00378678a90=
+7fd26608c3ab697955feb8231/444564093" style=3D "font-family:'proxima_nova_rgr=
+egular', Proxima Nova, Helvetica, Arial, sans-serif;color:#0088cc;text-deco=
+ration:underline;font-family:'proxima_nova_rgregular', Proxima Nova, Helvet=
+ica, Arial,
+sans-serif;" class=3D "link">unsubscribe</a>=2E
+                                            <br>
+                                            <br> Litmus works alongside your existing email market= ing tools to ensure you never send a broken email=2E <a href=3D "http://page=
+s=2Elitmus=2Ecom/e/31032/source-pardot-utm-medium-email/dgqbtj/444564093" s=t yle=3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Aria=
+l, sans-serif;color:#0088cc;text-decoration:underline;font-family:'proxima_=
+nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;" class=3D "link=
+">Learn how Litmus can help you send better email today</a>=2E
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--[if (gte mso 9)|(IE)]></td>
+                  </tr>
+                </table>
+                    <![endif]-->
+                            </div>
+                            <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                </tr>
+              </table>
+                  <![endif]-->
+                        </div>
+                    </div>
+                    <div class=3D "td tac vam webkit-show-td" style=3D "text-align:=
+center;vertical-align:middle;display:table-cell;display: none;">
+                        <label for=3D "one" name=3D "next" title=3D "grey" class=3D "ar=
+row">&#9654;</label>
+                    </div>
+                </div>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]-->
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+          <![endif]-->
+        </div>
+    </div>
+    <!--[if (gte mso 9)|(IE)]><!-->
+    <div class=3D "slider-dots webkit-show" style=3D "display: none;">
+        <div style=3D "position:absolute;left: 0;right: 0;margin: 0 auto; wi=
+dth: 300px; text-align: center;">
+            <label name=3D "one" for=3D "one" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "two" for=3D "two" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "three" for=3D "three" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "four" for=3D "four" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "five" for=3D "five" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "six" for=3D "six" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "seven" for=3D "seven" class=3D "dot"></label>
+            &nbsp;
+            <label name=3D "eight" for=3D "eight" class=3D "dot"></label>
+        </div>
+        <p class=3D "tac fsz13 pt5 pb5" style=3D "margin:0;mso-margin-top-alt=
+:15px;font-size:16px;line-height:24px;font-family:'proxima_nova_rgregular',=
+ Proxima Nova, Helvetica, Arial, sans-serif;color:#333;padding-top:5px;padd=
+ing-bottom:5px;font-size:13px;text-align:center;width: 100%; background: #f=
+fffff; color: #333333; margin-top: 30px;">
+            <a href=3D "http://pages=2Elitmus=2Ecom/e/31032/2017-11-20/d=
+gqbtn/444564093" class=3D "link" target=3D "_blank" style=3D "font-family:'pro=
+xima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#008=
+8cc;text-decoration:underline;">Litmus</a> &nbsp; &bull; &nbsp; 675 Massach= usetts Avenue, Cambridge, MA 02139 &nbsp; &bull; &nbsp; <a href=3D "http://p=
+ages=2Elitmus=2Ecom/webmail/31032/444564093/4b2e9ac055feed28a0c26dd22a7a003=
+78678a907fd26608c3ab697955feb8231" class=3D "link" style=3D "font-family:'pro=
+xima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#008=
+8cc;text-decoration:underline;">View Online</a> &nbsp; &bull; &nbsp; <a hre=f=3D "http://pages=2Elitmus=2Ecom/unsubscribe/u/31032/4b2e9ac055feed28a0c26d=
+d22a7a00378678a907fd26608c3ab697955feb8231/444564093" class=3D "link" style==3D "font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial,
+sans-serif;color:#0088cc;text-decoration:underline;">Unsubscribe</a> &nbsp;= &bull; &nbsp; <a href=3D "http://pages=2Elitmus=2Ecom/emailPreference/31032=
+/4b2e9ac055feed28a0c26dd22a7a00378678a907fd26608c3ab697955feb8231/444564093=
+" class=3D "link" style=3D "font-family:'proxima_nova_rgregular', Proxima Nov=
+a, Helvetica, Arial, sans-serif;color:#0088cc;text-decoration:underline;">U=
+pdate Preferences</a>
+        </p>
+    </div>
+    <!--<![endif]-->
+    <img alt=3D "" src=3D "http://pages=2Elitmus=2Ecom/r/31032/1/444564093/=
+open/1" />
+    <style>
+            @media print {
+        #_t {
+            background-image: url('https://pvrseo3=
+ 9=2Eemltrk=2Ecom/pvrseo39?p');}} div=2EOutlookMessageHeader {background-ima=
+ ge:url('https://pvrseo39=2Eemltrk=2Ecom/pvrseo39?f')
+        }
+        table=2Emoz-email-hea=ders-table {
+            background-image: url('https://pvrseo39=2Eemltrk=2Ecom/pvrseo39?=
+ f')} blockquote #_t {background-image:url('https: //pvrseo39=2Eemltrk=2Ecom/=
+            pvrseo39?f')} #MailContainerBody #_t {background-image:url('https: //pvrseo3=
+            9=2Eemltrk=2Ecom/pvrseo39?f')}
+    </style>
+    <div id=3D "_t"></div>
+    <img src=3D "https://pvrseo39=2Eemltrk=2Ecom/pvrseo39" width=3D "1" height=3D="1" border=3D "0" /></body>
+
+</html>

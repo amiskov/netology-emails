@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td align="left"><!--block1
+        тут не должно быть пробелов и переносов строк, т.к. outlook.com будет интерпретировать
+        блоки как inline-block, а между ними не должно быть пробелов
+        --><div style="float: left; display: inline-block; width: 200px;">
+            <table width="200" border="0" cellspacing="0" cellpadding="0" align="left">
+                <tr><td align="left" valign="middle">Блок 1</td></tr>
+            </table>
+        </div><!-- block1 END
+
+        тут так же фигня
+
+    --><!--[if gte mso 9]></td><td><![endif]--><!-- block2
+
+     --><div style="float: left; display: inline-block; width: 200px;">
+            <table width="200" border="0" cellspacing="0" cellpadding="0" align="left">
+                <tr><td align="left" valign="middle"> Блок 2 </td></tr>
+            </table>
+        </div>
+        <!-- block2 END -->
+    </td></tr>
+</table>
+
+</body>
+</html>
